@@ -21,11 +21,30 @@ RAG / 知识图谱方向研究用的原始数据，从一个本地工作目录�
 - `texts_clean.json` — 同上，做过去噪
 - `match.json` / `match2.json` — 标题与正文的匹配结果
 
-## 没有放进来的 6 个分片
+## 6 个 parquet 分片：走 Releases，不进 git
 
-`wiki_zh/train-00000-of-00006.parquet` ~ `train-00005`，合计 1.64 GB，单文件 121–560 MB，**超过 GitHub 单文件 100 MB 的硬限制**，因此被 `.gitignore` 排除。
+`wiki_zh/train-00000-of-00006.parquet` ~ `train-00005`，合计 1.64 GB，单文件 121–560 MB，**超过 GitHub 单文件 100 MB 的硬限制**，普通 git 推不上去（服务端直接拒收，不是配置问题）。
 
-重下方式：它们是 HuggingFace `datasets` 格式的中文维基分片，用任意版本的 `wikipedia` 中文快照导出即可得到同名同结构的 `train-0000X-of-00006.parquet`。**校验口径：新分片重新抽出的标题数应与 `titles.json` 的 1,384,748 条一致**（版本不同会有出入，以实际抽出的 `texts.json` 是否覆盖所需条目为准）。
+这 6 个文件放在本仓的 Release 附件里（附件单文件上限 2 GB，免费，不占 git 历史）：
+
+**下载地址**：https://github.com/Starry985666/---/releases/tag/v1-parquet
+
+| 文件 | 体积 | SHA-256（前 16 位） |
+|---|---|---|
+| `train-00000-of-00006.parquet` | 559 MB | `853ddf4a138c792a` |
+| `train-00001-of-00006.parquet` | 251 MB | `038b08e5aae38b5a` |
+| `train-00002-of-00006.parquet` | 120 MB | `ec8f6c0dd1418b8f` |
+| `train-00003-of-00006.parquet` | 249 MB | `4884e4933fa91f46` |
+| `train-00004-of-00006.parquet` | 244 MB | `415a5cd235a359a0` |
+| `train-00005-of-00006.parquet` | 214 MB | `803ae27118b1daf9` |
+
+下载后放回 `_datasets/wiki_zh/`，与 `titles.json` 同级即可。校验：
+
+```bash
+cd _datasets/wiki_zh && sha256sum train-*.parquet   # 对照上表前 16 位
+```
+
+**校验口径**：用这批分片重新抽取，标题数应与 `titles.json` 的 1,384,748 条一致；版本不同会有出入，以实际抽出的 `texts.json` 是否覆盖所需条目为准。
 
 ## 许可与出处
 
