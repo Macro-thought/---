@@ -1,0 +1,16 @@
+# 只收数据，其余一律不跟踪
+# 这个仓的用途是"数据集存档"，代码仓不在里面
+/*
+!/.gitignore
+!/.gitattributes
+!/README.md
+!/_datasets/
+
+# 6 个 parquet 分片单个 121–560 MB，超过 GitHub 单文件 100 MB 硬限制
+# 重下方法见 README
+_datasets/wiki_zh/*.parquet
+
+# 系统垃圾
+.DS_Store
+Thumbs.db
+desktop.ini

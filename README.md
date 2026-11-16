@@ -1,0 +1,45 @@
+# 研究数据集存档
+
+RAG / 知识图谱方向研究用的原始数据，从一个本地工作目录里整理出来，单独存放以免和代码混在一起。
+
+整理日期：2026-11-16。数据来自公开渠道，均为原样存档，未做二次加工（`wiki_zh` 下几个 json 是从分片里抽出来的派生文件）。
+
+## 目录
+
+| 路径 | 体积 | 内容 |
+|---|---|---|
+| `_datasets/rot_kg.zip` | 34 MB | RotatE 官方仓库 + WN18RR 数据包，TransE / RotatE 复现用 |
+| `_datasets/musique/musique_dev.jsonl` | 29 MB | MuSiQue dev 集，早期 schema 算子原型的输入 |
+| `_datasets/wiki_zh/` | 38 MB（见下） | 中文维基抽出的标题表、正文与匹配结果 |
+| `_datasets/papers/` | 1.4 MB | TransE (2013)、ConvE (2018)、RotatE (2019) 三篇方法/基线原文 |
+| `_datasets/web/` | 592 KB | 网页存档：CCKS 会议页、一个相关页面 |
+
+`_datasets/wiki_zh/` 里：
+
+- `titles.json` — 1,384,748 条中文维基条目标题
+- `texts.json` — 394 篇正文，键为条目标题
+- `texts_clean.json` — 同上，做过去噪
+- `match.json` / `match2.json` — 标题与正文的匹配结果
+
+## 没有放进来的 6 个分片
+
+`wiki_zh/train-00000-of-00006.parquet` ~ `train-00005`，合计 1.64 GB，单文件 121–560 MB，**超过 GitHub 单文件 100 MB 的硬限制**，因此被 `.gitignore` 排除。
+
+重下方式：它们是 HuggingFace `datasets` 格式的中文维基分片，用任意版本的 `wikipedia` 中文快照导出即可得到同名同结构的 `train-0000X-of-00006.parquet`。**校验口径：新分片重新抽出的标题数应与 `titles.json` 的 1,384,748 条一致**（版本不同会有出入，以实际抽出的 `texts.json` 是否覆盖所需条目为准）。
+
+## 许可与出处
+
+- `wiki_zh/` — 来自中文维基百科快照，文本按 CC BY-SA 授权，转载需署名并以相同方式共享
+- `musique/` — MuSiQue 数据集，CC BY 4.0
+- `rot_kg.zip` — RotatE 官方代码（MIT）与其附带的 WN18RR 数据包
+- `papers/` — 三篇论文的版权归原作者/出版方，此处仅作个人研究存档，非商业分发
+
+## 用法
+
+数据目录结构即仓库结构，脚本按相对路径读：
+
+```python
+from pathlib import Path
+DATA = Path("_datasets")
+MUSIQUE = DATA / "musique" / "musique_dev.jsonl"
+```
