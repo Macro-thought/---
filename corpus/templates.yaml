@@ -1,0 +1,93 @@
+# T2.1 语料模板池（与 corpus/build_corpus.py 一致）
+# 每个实体类型 3 套主句；事实句按实体 id 的确定性哈希轮换，保证同图同文。
+meta:
+  sentences_per_doc: [3, 5]
+  variant_rule: "sum(ord(c) for c in entity_id) % 3"
+  source_graph: data/graph_v1.json
+  leakage_rule: "禁止出现 P 编号、Q 编号、wikidata、URL；出现在实体标签内的同名串（如机型名 冲8Q300）不算泄漏"
+
+types:
+  航空公司:
+    heads:
+      - "{label}是一家{country}的{subtype}。"
+      - "{label}（{label_en}）是一家{country}的{subtype}。"
+      - "{label}是{country}的一家{subtype}。"
+    facts:
+      - "它的枢纽机场包括{hubs}。"     # 固定保留：所有指称题的对象
+      - "它运营的机型包括{aircraft}。"
+      - "公司总部设在{hq}。"
+      - "它成立于{inception}年。"
+      - "它隶属于{parent}。"
+      - "它的所有者包括{owner}。"
+      - "旗下子公司包括{subsidiary}。"
+      - "它是{alliance}的成员。"
+    subtype_words:
+      航空公司: 航空公司
+      货运航空: 货运航空公司
+      支线航空: 支线航空公司
+      低成本航空: 低成本航空公司
+      直升机航空: 直升机航空公司
+
+  机场:
+    heads:
+      - "{label}是一座{class}。"
+      - "{label}（{label_en}）是一座{class}。"
+      - "{label}是{country}的一座{class}。"
+    facts:
+      - "它主要服务{cities}。"
+      - "它位于{admin}。"
+      - "它所在的国家是{country}。"
+    class_words:
+      国际机场: 国际机场
+      普通机场: 机场
+
+  机型:
+    heads:
+      - "{label}是由{manufacturer}研制的{kind}。"
+      - "{label}（{label_en}）是{manufacturer}的产品，属于{kind}。"
+      - "{label}是{manufacturer}研发的{kind}。"
+    facts:
+      - "它的制造商是{manufacturer}。"
+      - "在图谱分类中，它属于「机型」这一类。"
+    kind_words:
+      固定翼机型: 固定翼飞机
+      直升机: 直升机
+
+  城市:
+    heads:
+      - "{label}是{country}的一座城市。"
+      - "{label}位于{country}，是一座城市。"
+      - "{label}是{country}的城市之一。"
+    facts:
+      - "它位于{admin}。"
+      - "图中的{airports}等机场以它为服务城市。"
+      - "有航空公司把它作为总部所在地。"
+      - "在图谱分类中，它属于「城市」这一类。"
+
+  国家:
+    fixed:
+      - "{label}是一个国家。"
+      - "本图中的航空公司按国家归属于{label}。"
+      - "{label}的机场与航线构成了图中的一部分。"
+
+  企业:
+    heads:
+      - "{label}是{country}的一家{type_word}。"
+      - "{label}是一家位于{country}的{type_word}。"
+      - "{label}是{country}的一个{type_word}。"
+    facts:
+      - "它隶属于{parent}。"
+      - "旗下子公司包括{subsidiary}。"
+      - "它的所有者包括{owner}。"
+      - "它为{aircraft}等机型提供制造。"
+      - "{children}等实体把它列为母公司。"
+      - "在图谱分类中，它属于「企业」这一类。"
+    type_word: 企业
+
+  组织:
+    inherits: 企业
+    type_word: 机构
+
+  其他:
+    inherits: 企业
+    type_word: 实体

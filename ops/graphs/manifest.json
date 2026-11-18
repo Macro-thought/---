@@ -1,0 +1,88 @@
+[
+ {
+  "op": "REFINE_TYPE",
+  "params": {
+   "op": "REFINE_TYPE",
+   "parent": "航空公司",
+   "attribute": "p31_subtype"
+  },
+  "n_entities": 600,
+  "n_edges": 1506,
+  "changed": {
+   "n_modified": 16,
+   "added_types": [
+    "低成本航空",
+    "支线航空",
+    "直升机航空",
+    "货运航空"
+   ],
+   "n_edges_before": 1506,
+   "n_edges_after": 1506
+  }
+ },
+ {
+  "op": "RESTRICT_REL",
+  "params": {
+   "op": "RESTRICT_REL",
+   "rel": "枢纽机场",
+   "attribute": "airport_class",
+   "value": "国际机场"
+  },
+  "n_entities": 600,
+  "n_edges": 1483,
+  "changed": {
+   "n_removed": 23,
+   "n_edges_before": 1506,
+   "n_edges_after": 1483
+  }
+ },
+ {
+  "op": "MERGE_ENTITY",
+  "params": {
+   "op": "MERGE_ENTITY",
+   "keep": "Q5099568",
+   "merge": "Q51756"
+  },
+  "n_entities": 599,
+  "n_edges": 1485,
+  "changed": {
+   "n_entities_before": 600,
+   "n_entities_after": 599,
+   "n_edges_before": 1506,
+   "n_edges_after": 1485
+  }
+ },
+ {
+  "op": "SPLIT_CONCEPT",
+  "params": {
+   "op": "SPLIT_CONCEPT",
+   "parent": "机场",
+   "attribute": "airport_class"
+  },
+  "n_entities": 600,
+  "n_edges": 1506,
+  "changed": {
+   "n_modified": 74,
+   "added_types": [
+    "国际机场",
+    "普通机场"
+   ],
+   "n_edges_before": 1506,
+   "n_edges_after": 1506
+  }
+ },
+ {
+  "op": "ADD_INST",
+  "params": {
+   "op": "ADD_INST"
+  },
+  "n_entities": 610,
+  "n_edges": 1519,
+  "changed": {
+   "n_added_nodes": 10,
+   "n_added_edges": 13,
+   "n_edges_before": 1506,
+   "n_edges_after": 1519
+  }
+ }
+]

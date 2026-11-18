@@ -1,0 +1,15 @@
+Q1 merge_entity-count-01 全图共有多少个航空公司？ gold 185 -> 184
+  v1 direct count = 185
+  v2 direct count = 184
+  Q51756 present v1/v2: True / False
+  keeper Q5099568 type=企业 props={'country': 'Q865', 'inception': '1959', 'hq': 'Q5008640'}
+
+Q2 split_concept-universal-01 是否所有机场都有服务城市？ gold 否 -> 是
+  v1 airports=74, with 服务城市=73, all=False
+  v2 class-name 机场 resolved=0 (daughters still present by facet: 74)
+  => empty scope, universal vacuously TRUE=True
+
+Q3 restrict_rel-referral-01 「朱鹭航空」的枢纽机场是哪个（些）？ gold 新潟机场 -> 空
+  subject ids v1/v2: ['Q105481325'] / ['Q105481325']
+  v1 hubs = ['新潟机场'] (['普通机场'])
+  v2 hubs = []

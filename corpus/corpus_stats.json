@@ -1,0 +1,12 @@
+{
+ "n_docs": 600,
+ "n_sentences_dist": {
+  "3": 385,
+  "4": 141,
+  "5": 74
+ },
+ "leaks": [],
+ "n_leaks": 0,
+ "docs_under_3_sentences": [],
+ "avg_chars": 55.5
+}

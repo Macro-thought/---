@@ -1,0 +1,16 @@
+﻿operator,qtype,n,stable,flip,flip_rate,prior,prior_match
+ADD_INST,referral,8,8,0,0.0,稳定,match
+ADD_INST,count,8,8,0,0.0,稳定,match
+ADD_INST,universal,8,8,0,0.0,稳定,match
+REFINE_TYPE,referral,8,8,0,0.0,稳定,match
+REFINE_TYPE,count,8,8,0,0.0,稳定,match
+REFINE_TYPE,universal,8,8,0,0.0,稳定,match
+RESTRICT_REL,referral,8,4,4,0.5,可能翻,consistent
+RESTRICT_REL,count,8,4,4,0.5,可能翻,consistent
+RESTRICT_REL,universal,8,5,3,0.375,可能翻,consistent
+MERGE_ENTITY,referral,8,8,0,0.0,稳定,match
+MERGE_ENTITY,count,8,0,8,1.0,必翻,match
+MERGE_ENTITY,universal,8,6,2,0.25,可能翻,consistent
+SPLIT_CONCEPT,referral,8,8,0,0.0,稳定,match
+SPLIT_CONCEPT,count,8,4,4,0.5,可能翻,consistent
+SPLIT_CONCEPT,universal,8,0,8,1.0,必翻,match

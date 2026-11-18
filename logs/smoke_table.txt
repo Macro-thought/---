@@ -1,0 +1,17 @@
+| file | system | n | nonempty | rate | in_tok | out_tok | p50ms | p95ms | maxms | elapsed_s |
+|---|---|---|---|---|---|---|---|---|---|---|
+| b1_v1.json | B1_naive | 120 | 120 | 1.000 | 22430 | 698 | 0.7 | 1.1 | 1.6 | 0.09 |
+| b2_add_inst.json | B2_graph | 120 | 120 | 1.000 | 228421 | 277 | 0.1 | 0.6 | 3.8 | 0.04 |
+| b2_merge_entity.json | B2_graph | 120 | 119 | 0.992 | 227594 | 273 | 0.1 | 0.6 | 3.5 | 0.04 |
+| b2_refine_type.json | B2_graph | 120 | 120 | 1.000 | 228421 | 277 | 0.1 | 0.6 | 3.6 | 0.04 |
+| b2_restrict_rel.json | B2_graph | 120 | 111 | 0.925 | 221660 | 251 | 0.1 | 0.6 | 3.9 | 0.03 |
+| b2_split_concept.json | B2_graph | 120 | 120 | 1.000 | 228421 | 277 | 0.1 | 0.6 | 3.6 | 0.04 |
+| b2_v1.json | B2_graph | 120 | 120 | 1.000 | 228421 | 277 | 0.1 | 0.6 | 3.8 | 0.04 |
+| b3_proxy_add_inst.json | B3_proxy | 120 | 120 | 1.000 | 249517 | 277 | 1.0 | 1.5 | 5.3 | 0.13 |
+| b3_proxy_merge_entity.json | B3_proxy | 120 | 119 | 0.992 | 248695 | 273 | 1.0 | 1.7 | 4.6 | 0.13 |
+| b3_proxy_refine_type.json | B3_proxy | 120 | 120 | 1.000 | 249517 | 277 | 1.0 | 1.6 | 4.7 | 0.13 |
+| b3_proxy_restrict_rel.json | B3_proxy | 120 | 111 | 0.925 | 242756 | 251 | 1.0 | 1.4 | 4.2 | 0.13 |
+| b3_proxy_split_concept.json | B3_proxy | 120 | 120 | 1.000 | 249517 | 277 | 1.0 | 1.5 | 4.6 | 0.13 |
+| b3_proxy_v1.json | B3_proxy | 120 | 120 | 1.000 | 249517 | 277 | 1.0 | 1.6 | 4.6 | 0.13 |
+
+TOTAL runs=13 qa=1560 in=2874887 out=3962 cost=2.3078 yuan

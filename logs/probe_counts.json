@@ -1,0 +1,74 @@
+{
+ "seeds_zh": [
+  {
+   "cnt": {
+    "datatype": "http://www.w3.org/2001/XMLSchema#int",
+    "type": "literal",
+    "value": "84"
+   }
+  }
+ ],
+ "seeds_all": [
+  {
+   "cnt": {
+    "datatype": "http://www.w3.org/2001/XMLSchema#int",
+    "type": "literal",
+    "value": "217"
+   }
+  }
+ ],
+ "P113": [
+  {
+   "cnt": {
+    "datatype": "http://www.w3.org/2001/XMLSchema#int",
+    "type": "literal",
+    "value": "189"
+   }
+  }
+ ],
+ "P121": [
+  {
+   "cnt": {
+    "datatype": "http://www.w3.org/2001/XMLSchema#int",
+    "type": "literal",
+    "value": "223"
+   }
+  }
+ ],
+ "P749": [
+  {
+   "cnt": {
+    "datatype": "http://www.w3.org/2001/XMLSchema#int",
+    "type": "literal",
+    "value": "83"
+   }
+  }
+ ],
+ "P127": [
+  {
+   "cnt": {
+    "datatype": "http://www.w3.org/2001/XMLSchema#int",
+    "type": "literal",
+    "value": "24"
+   }
+  }
+ ],
+ "P159": [
+  {
+   "cnt": {
+    "datatype": "http://www.w3.org/2001/XMLSchema#int",
+    "type": "literal",
+    "value": "186"
+   }
+  }
+ ],
+ "P17": [
+  {
+   "cnt": {
+    "datatype": "http://www.w3.org/2001/XMLSchema#int",
+    "type": "literal",
+    "value": "231"
+   }
+  }
+ ]
+}

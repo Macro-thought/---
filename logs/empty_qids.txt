@@ -1,0 +1,4 @@
+b2_merge_entity.json -> ['merge_entity-referral-01']
+b2_restrict_rel.json -> ['add_inst-referral-02', 'refine_type-referral-02', 'refine_type-referral-03', 'restrict_rel-referral-01', 'restrict_rel-referral-02', 'restrict_rel-referral-03', 'restrict_rel-referral-04', 'split_concept-referral-05', 'split_concept-referral-08']
+b3_proxy_merge_entity.json -> ['merge_entity-referral-01']
+b3_proxy_restrict_rel.json -> ['add_inst-referral-02', 'refine_type-referral-02', 'refine_type-referral-03', 'restrict_rel-referral-01', 'restrict_rel-referral-02', 'restrict_rel-referral-03', 'restrict_rel-referral-04', 'split_concept-referral-05', 'split_concept-referral-08']

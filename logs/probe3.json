@@ -1,0 +1,115 @@
+{
+ "label_langs": [
+  {
+   "lang": "zh",
+   "cnt": "185"
+  },
+  {
+   "lang": "zh-hant",
+   "cnt": "95"
+  },
+  {
+   "lang": "zh-hans",
+   "cnt": "84"
+  },
+  {
+   "lang": "zh-hk",
+   "cnt": "76"
+  },
+  {
+   "lang": "zh-tw",
+   "cnt": "36"
+  },
+  {
+   "lang": "zh-cn",
+   "cnt": "33"
+  },
+  {
+   "lang": "zh-sg",
+   "cnt": "15"
+  },
+  {
+   "lang": "zh-mo",
+   "cnt": "11"
+  },
+  {
+   "lang": "zh-my",
+   "cnt": "11"
+  }
+ ],
+ "airline_subclasses": [
+  {
+   "t": "http://www.wikidata.org/entity/Q46970",
+   "tl": "航空公司",
+   "cnt": "194"
+  },
+  {
+   "t": "http://www.wikidata.org/entity/Q1057026",
+   "tl": "货运航空公司",
+   "cnt": "12"
+  },
+  {
+   "t": "http://www.wikidata.org/entity/Q53649729",
+   "cnt": "6"
+  },
+  {
+   "t": "http://www.wikidata.org/entity/Q2440569",
+   "tl": "区域航空公司",
+   "cnt": "5"
+  },
+  {
+   "t": "http://www.wikidata.org/entity/Q2440569",
+   "tl": "区域航空公司",
+   "cnt": "5"
+  },
+  {
+   "t": "http://www.wikidata.org/entity/Q190915",
+   "tl": "廉价航空公司",
+   "cnt": "1"
+  },
+  {
+   "t": "http://www.wikidata.org/entity/Q190915",
+   "tl": "廉价航空公司",
+   "cnt": "1"
+  }
+ ],
+ "airport_types": [
+  {
+   "t": "http://www.wikidata.org/entity/Q1248784",
+   "tl": "机场",
+   "cnt": "54"
+  },
+  {
+   "t": "http://www.wikidata.org/entity/Q1248784",
+   "tl": "机场",
+   "cnt": "54"
+  },
+  {
+   "t": "http://www.wikidata.org/entity/Q644371",
+   "tl": "国际机场",
+   "cnt": "53"
+  },
+  {
+   "t": "http://www.wikidata.org/entity/Q644371",
+   "tl": "国际机场",
+   "cnt": "53"
+  },
+  {
+   "t": "http://www.wikidata.org/entity/Q28692646",
+   "cnt": "7"
+  },
+  {
+   "t": "http://www.wikidata.org/entity/Q837800",
+   "cnt": "3"
+  },
+  {
+   "t": "http://www.wikidata.org/entity/Q55612991",
+   "cnt": "1"
+  }
+ ],
+ "helicopter_check": [
+  {
+   "cnt": "1"
+  }
+ ]
+}

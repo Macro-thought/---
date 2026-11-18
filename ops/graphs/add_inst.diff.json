@@ -1,0 +1,265 @@
+{
+ "op": "ADD_INST",
+ "params": {
+  "package": "data/add_instances.json"
+ },
+ "added_nodes": [
+  {
+   "id": "Q32245",
+   "label_zh": "新加坡航空",
+   "label_en": "",
+   "type": "航空公司",
+   "type_path": [
+    "组织",
+    "企业",
+    "航空公司"
+   ],
+   "aliases": [],
+   "props": {
+    "country": "Q334",
+    "p31_subtype": "航空公司"
+   }
+  },
+  {
+   "id": "Q32159",
+   "label_zh": "新加坡樟宜机场",
+   "label_en": "",
+   "type": "机场",
+   "type_path": [
+    "地点",
+    "机场"
+   ],
+   "aliases": [],
+   "props": {
+    "country": "Q334",
+    "airport_class": "国际机场"
+   }
+  },
+  {
+   "id": "Q188710",
+   "label_zh": "泰国国际航空",
+   "label_en": "",
+   "type": "航空公司",
+   "type_path": [
+    "组织",
+    "企业",
+    "航空公司"
+   ],
+   "aliases": [],
+   "props": {
+    "country": "Q869",
+    "p31_subtype": "航空公司"
+   }
+  },
+  {
+   "id": "Q194316",
+   "label_zh": "素万那普机场",
+   "label_en": "",
+   "type": "机场",
+   "type_path": [
+    "地点",
+    "机场"
+   ],
+   "aliases": [],
+   "props": {
+    "country": "Q869",
+    "airport_class": "国际机场"
+   }
+  },
+  {
+   "id": "Q308952",
+   "label_zh": "马来西亚航空",
+   "label_en": "",
+   "type": "航空公司",
+   "type_path": [
+    "组织",
+    "企业",
+    "航空公司"
+   ],
+   "aliases": [],
+   "props": {
+    "country": "Q833",
+    "p31_subtype": "航空公司"
+   }
+  },
+  {
+   "id": "Q1305028",
+   "label_zh": "古晋国际机场",
+   "label_en": "",
+   "type": "机场",
+   "type_path": [
+    "地点",
+    "机场"
+   ],
+   "aliases": [],
+   "props": {
+    "country": "Q833",
+    "airport_class": "国际机场"
+   }
+  },
+  {
+   "id": "Q500253",
+   "label_zh": "吉隆坡国际机场",
+   "label_en": "",
+   "type": "机场",
+   "type_path": [
+    "地点",
+    "机场"
+   ],
+   "aliases": [],
+   "props": {
+    "country": "Q833",
+    "airport_class": "国际机场"
+   }
+  },
+  {
+   "id": "Q645760",
+   "label_zh": "哥打基纳巴卢国际机场",
+   "label_en": "",
+   "type": "机场",
+   "type_path": [
+    "地点",
+    "机场"
+   ],
+   "aliases": [],
+   "props": {
+    "country": "Q833",
+    "airport_class": "国际机场"
+   }
+  },
+  {
+   "id": "Q334",
+   "label_zh": "新加坡",
+   "label_en": "",
+   "type": "国家",
+   "type_path": [
+    "地点",
+    "国家"
+   ],
+   "aliases": [],
+   "props": {}
+  },
+  {
+   "id": "Q869",
+   "label_zh": "泰国",
+   "label_en": "",
+   "type": "国家",
+   "type_path": [
+    "地点",
+    "国家"
+   ],
+   "aliases": [],
+   "props": {}
+  }
+ ],
+ "added_edges": [
+  {
+   "h": "Q32245",
+   "rel": "国家",
+   "rel_code": "country",
+   "t": "Q334",
+   "props": {},
+   "source": "P17"
+  },
+  {
+   "h": "Q32245",
+   "rel": "枢纽机场",
+   "rel_code": "hub",
+   "t": "Q32159",
+   "props": {},
+   "source": "P113"
+  },
+  {
+   "h": "Q32159",
+   "rel": "国家",
+   "rel_code": "country",
+   "t": "Q334",
+   "props": {},
+   "source": "P17"
+  },
+  {
+   "h": "Q188710",
+   "rel": "国家",
+   "rel_code": "country",
+   "t": "Q869",
+   "props": {},
+   "source": "P17"
+  },
+  {
+   "h": "Q188710",
+   "rel": "枢纽机场",
+   "rel_code": "hub",
+   "t": "Q194316",
+   "props": {},
+   "source": "P113"
+  },
+  {
+   "h": "Q194316",
+   "rel": "国家",
+   "rel_code": "country",
+   "t": "Q869",
+   "props": {},
+   "source": "P17"
+  },
+  {
+   "h": "Q308952",
+   "rel": "国家",
+   "rel_code": "country",
+   "t": "Q833",
+   "props": {},
+   "source": "P17"
+  },
+  {
+   "h": "Q308952",
+   "rel": "枢纽机场",
+   "rel_code": "hub",
+   "t": "Q1305028",
+   "props": {},
+   "source": "P113"
+  },
+  {
+   "h": "Q1305028",
+   "rel": "国家",
+   "rel_code": "country",
+   "t": "Q833",
+   "props": {},
+   "source": "P17"
+  },
+  {
+   "h": "Q308952",
+   "rel": "枢纽机场",
+   "rel_code": "hub",
+   "t": "Q500253",
+   "props": {},
+   "source": "P113"
+  },
+  {
+   "h": "Q500253",
+   "rel": "国家",
+   "rel_code": "country",
+   "t": "Q833",
+   "props": {},
+   "source": "P17"
+  },
+  {
+   "h": "Q308952",
+   "rel": "枢纽机场",
+   "rel_code": "hub",
+   "t": "Q645760",
+   "props": {},
+   "source": "P113"
+  },
+  {
+   "h": "Q645760",
+   "rel": "国家",
+   "rel_code": "country",
+   "t": "Q833",
+   "props": {},
+   "source": "P17"
+  }
+ ],
+ "n_added_nodes": 10,
+ "n_added_edges": 13,
+ "n_edges_before": 1506,
+ "n_edges_after": 1519
+}

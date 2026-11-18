@@ -1,0 +1,25 @@
+{
+ "op": "MERGE_ENTITY",
+ "params": {
+  "op": "MERGE_ENTITY",
+  "keep": "Q5099568",
+  "merge": "Q51756"
+ },
+ "kept": {
+  "id": "Q5099568",
+  "label": "华航集团",
+  "type": "企业"
+ },
+ "absorbed": {
+  "id": "Q51756",
+  "label": "中华航空",
+  "type": "航空公司"
+ },
+ "rewired_edges": 29,
+ "deduped_edges": 8,
+ "self_loops_dropped": 13,
+ "n_entities_before": 600,
+ "n_entities_after": 599,
+ "n_edges_before": 1506,
+ "n_edges_after": 1485
+}

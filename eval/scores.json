@@ -1,0 +1,608 @@
+{
+ "B1_naive": {
+  "add_inst": {
+   "referral": {
+    "n": 8,
+    "obs_flip": 0,
+    "gold_flip": 0,
+    "FR": 0.0,
+    "FFR": 0.0,
+    "MFR": null,
+    "acc_v1": 0.25,
+    "acc_v2": 0.25
+   },
+   "count": {
+    "n": 8,
+    "obs_flip": 0,
+    "gold_flip": 0,
+    "FR": 0.0,
+    "FFR": 0.0,
+    "MFR": null,
+    "acc_v1": 0.0,
+    "acc_v2": 0.0
+   },
+   "universal": {
+    "n": 8,
+    "obs_flip": 0,
+    "gold_flip": 0,
+    "FR": 0.0,
+    "FFR": 0.0,
+    "MFR": null,
+    "acc_v1": 0.25,
+    "acc_v2": 0.25
+   },
+   "overall": {
+    "n": 24,
+    "FR": 0.0,
+    "FFR": 0.0,
+    "MFR": null,
+    "acc_v1": 0.167,
+    "acc_v2": 0.167
+   }
+  },
+  "refine_type": {
+   "referral": {
+    "n": 8,
+    "obs_flip": 0,
+    "gold_flip": 0,
+    "FR": 0.0,
+    "FFR": 0.0,
+    "MFR": null,
+    "acc_v1": 0.25,
+    "acc_v2": 0.25
+   },
+   "count": {
+    "n": 8,
+    "obs_flip": 0,
+    "gold_flip": 0,
+    "FR": 0.0,
+    "FFR": 0.0,
+    "MFR": null,
+    "acc_v1": 0.0,
+    "acc_v2": 0.0
+   },
+   "universal": {
+    "n": 8,
+    "obs_flip": 0,
+    "gold_flip": 0,
+    "FR": 0.0,
+    "FFR": 0.0,
+    "MFR": null,
+    "acc_v1": 0.375,
+    "acc_v2": 0.375
+   },
+   "overall": {
+    "n": 24,
+    "FR": 0.0,
+    "FFR": 0.0,
+    "MFR": null,
+    "acc_v1": 0.208,
+    "acc_v2": 0.208
+   }
+  },
+  "restrict_rel": {
+   "referral": {
+    "n": 8,
+    "obs_flip": 0,
+    "gold_flip": 4,
+    "FR": 0.0,
+    "FFR": 0.0,
+    "MFR": 1.0,
+    "acc_v1": 0.25,
+    "acc_v2": 0.25
+   },
+   "count": {
+    "n": 8,
+    "obs_flip": 0,
+    "gold_flip": 4,
+    "FR": 0.0,
+    "FFR": 0.0,
+    "MFR": 1.0,
+    "acc_v1": 0.0,
+    "acc_v2": 0.0
+   },
+   "universal": {
+    "n": 8,
+    "obs_flip": 0,
+    "gold_flip": 3,
+    "FR": 0.0,
+    "FFR": 0.0,
+    "MFR": 1.0,
+    "acc_v1": 0.25,
+    "acc_v2": 0.625
+   },
+   "overall": {
+    "n": 24,
+    "FR": 0.0,
+    "FFR": 0.0,
+    "MFR": 1.0,
+    "acc_v1": 0.167,
+    "acc_v2": 0.292
+   }
+  },
+  "merge_entity": {
+   "referral": {
+    "n": 8,
+    "obs_flip": 0,
+    "gold_flip": 0,
+    "FR": 0.0,
+    "FFR": 0.0,
+    "MFR": null,
+    "acc_v1": 0.0,
+    "acc_v2": 0.0
+   },
+   "count": {
+    "n": 8,
+    "obs_flip": 0,
+    "gold_flip": 8,
+    "FR": 0.0,
+    "FFR": null,
+    "MFR": 1.0,
+    "acc_v1": 0.0,
+    "acc_v2": 0.0
+   },
+   "universal": {
+    "n": 8,
+    "obs_flip": 0,
+    "gold_flip": 2,
+    "FR": 0.0,
+    "FFR": 0.0,
+    "MFR": 1.0,
+    "acc_v1": 0.5,
+    "acc_v2": 0.25
+   },
+   "overall": {
+    "n": 24,
+    "FR": 0.0,
+    "FFR": 0.0,
+    "MFR": 1.0,
+    "acc_v1": 0.167,
+    "acc_v2": 0.083
+   }
+  },
+  "split_concept": {
+   "referral": {
+    "n": 8,
+    "obs_flip": 0,
+    "gold_flip": 0,
+    "FR": 0.0,
+    "FFR": 0.0,
+    "MFR": null,
+    "acc_v1": 0.0,
+    "acc_v2": 0.0
+   },
+   "count": {
+    "n": 8,
+    "obs_flip": 0,
+    "gold_flip": 4,
+    "FR": 0.0,
+    "FFR": 0.0,
+    "MFR": 1.0,
+    "acc_v1": 0.0,
+    "acc_v2": 0.375
+   },
+   "universal": {
+    "n": 8,
+    "obs_flip": 0,
+    "gold_flip": 8,
+    "FR": 0.0,
+    "FFR": null,
+    "MFR": 1.0,
+    "acc_v1": 0.0,
+    "acc_v2": 1.0
+   },
+   "overall": {
+    "n": 24,
+    "FR": 0.0,
+    "FFR": 0.0,
+    "MFR": 1.0,
+    "acc_v1": 0.0,
+    "acc_v2": 0.458
+   }
+  }
+ },
+ "B2_graph": {
+  "add_inst": {
+   "referral": {
+    "n": 8,
+    "obs_flip": 0,
+    "gold_flip": 0,
+    "FR": 0.0,
+    "FFR": 0.0,
+    "MFR": null,
+    "acc_v1": 1.0,
+    "acc_v2": 1.0
+   },
+   "count": {
+    "n": 8,
+    "obs_flip": 0,
+    "gold_flip": 0,
+    "FR": 0.0,
+    "FFR": 0.0,
+    "MFR": null,
+    "acc_v1": 0.0,
+    "acc_v2": 0.0
+   },
+   "universal": {
+    "n": 8,
+    "obs_flip": 0,
+    "gold_flip": 0,
+    "FR": 0.0,
+    "FFR": 0.0,
+    "MFR": null,
+    "acc_v1": 0.25,
+    "acc_v2": 0.25
+   },
+   "overall": {
+    "n": 24,
+    "FR": 0.0,
+    "FFR": 0.0,
+    "MFR": null,
+    "acc_v1": 0.417,
+    "acc_v2": 0.417
+   }
+  },
+  "refine_type": {
+   "referral": {
+    "n": 8,
+    "obs_flip": 0,
+    "gold_flip": 0,
+    "FR": 0.0,
+    "FFR": 0.0,
+    "MFR": null,
+    "acc_v1": 1.0,
+    "acc_v2": 1.0
+   },
+   "count": {
+    "n": 8,
+    "obs_flip": 0,
+    "gold_flip": 0,
+    "FR": 0.0,
+    "FFR": 0.0,
+    "MFR": null,
+    "acc_v1": 0.0,
+    "acc_v2": 0.0
+   },
+   "universal": {
+    "n": 8,
+    "obs_flip": 0,
+    "gold_flip": 0,
+    "FR": 0.0,
+    "FFR": 0.0,
+    "MFR": null,
+    "acc_v1": 0.375,
+    "acc_v2": 0.375
+   },
+   "overall": {
+    "n": 24,
+    "FR": 0.0,
+    "FFR": 0.0,
+    "MFR": null,
+    "acc_v1": 0.458,
+    "acc_v2": 0.458
+   }
+  },
+  "restrict_rel": {
+   "referral": {
+    "n": 8,
+    "obs_flip": 4,
+    "gold_flip": 4,
+    "FR": 0.5,
+    "FFR": 0.0,
+    "MFR": 0.0,
+    "acc_v1": 1.0,
+    "acc_v2": 1.0
+   },
+   "count": {
+    "n": 8,
+    "obs_flip": 2,
+    "gold_flip": 4,
+    "FR": 0.25,
+    "FFR": 0.0,
+    "MFR": 0.5,
+    "acc_v1": 0.0,
+    "acc_v2": 0.0
+   },
+   "universal": {
+    "n": 8,
+    "obs_flip": 0,
+    "gold_flip": 3,
+    "FR": 0.0,
+    "FFR": 0.0,
+    "MFR": 1.0,
+    "acc_v1": 0.25,
+    "acc_v2": 0.625
+   },
+   "overall": {
+    "n": 24,
+    "FR": 0.25,
+    "FFR": 0.0,
+    "MFR": 0.455,
+    "acc_v1": 0.417,
+    "acc_v2": 0.542
+   }
+  },
+  "merge_entity": {
+   "referral": {
+    "n": 8,
+    "obs_flip": 1,
+    "gold_flip": 0,
+    "FR": 0.125,
+    "FFR": 0.125,
+    "MFR": null,
+    "acc_v1": 1.0,
+    "acc_v2": 0.875
+   },
+   "count": {
+    "n": 8,
+    "obs_flip": 0,
+    "gold_flip": 8,
+    "FR": 0.0,
+    "FFR": null,
+    "MFR": 1.0,
+    "acc_v1": 0.0,
+    "acc_v2": 0.0
+   },
+   "universal": {
+    "n": 8,
+    "obs_flip": 0,
+    "gold_flip": 2,
+    "FR": 0.0,
+    "FFR": 0.0,
+    "MFR": 1.0,
+    "acc_v1": 0.5,
+    "acc_v2": 0.25
+   },
+   "overall": {
+    "n": 24,
+    "FR": 0.042,
+    "FFR": 0.071,
+    "MFR": 1.0,
+    "acc_v1": 0.5,
+    "acc_v2": 0.375
+   }
+  },
+  "split_concept": {
+   "referral": {
+    "n": 8,
+    "obs_flip": 0,
+    "gold_flip": 0,
+    "FR": 0.0,
+    "FFR": 0.0,
+    "MFR": null,
+    "acc_v1": 1.0,
+    "acc_v2": 1.0
+   },
+   "count": {
+    "n": 8,
+    "obs_flip": 0,
+    "gold_flip": 4,
+    "FR": 0.0,
+    "FFR": 0.0,
+    "MFR": 1.0,
+    "acc_v1": 0.0,
+    "acc_v2": 0.5
+   },
+   "universal": {
+    "n": 8,
+    "obs_flip": 0,
+    "gold_flip": 8,
+    "FR": 0.0,
+    "FFR": null,
+    "MFR": 1.0,
+    "acc_v1": 0.0,
+    "acc_v2": 1.0
+   },
+   "overall": {
+    "n": 24,
+    "FR": 0.0,
+    "FFR": 0.0,
+    "MFR": 1.0,
+    "acc_v1": 0.333,
+    "acc_v2": 0.833
+   }
+  }
+ },
+ "B3_proxy": {
+  "add_inst": {
+   "referral": {
+    "n": 8,
+    "obs_flip": 0,
+    "gold_flip": 0,
+    "FR": 0.0,
+    "FFR": 0.0,
+    "MFR": null,
+    "acc_v1": 1.0,
+    "acc_v2": 1.0
+   },
+   "count": {
+    "n": 8,
+    "obs_flip": 0,
+    "gold_flip": 0,
+    "FR": 0.0,
+    "FFR": 0.0,
+    "MFR": null,
+    "acc_v1": 0.0,
+    "acc_v2": 0.0
+   },
+   "universal": {
+    "n": 8,
+    "obs_flip": 0,
+    "gold_flip": 0,
+    "FR": 0.0,
+    "FFR": 0.0,
+    "MFR": null,
+    "acc_v1": 0.25,
+    "acc_v2": 0.25
+   },
+   "overall": {
+    "n": 24,
+    "FR": 0.0,
+    "FFR": 0.0,
+    "MFR": null,
+    "acc_v1": 0.417,
+    "acc_v2": 0.417
+   }
+  },
+  "refine_type": {
+   "referral": {
+    "n": 8,
+    "obs_flip": 0,
+    "gold_flip": 0,
+    "FR": 0.0,
+    "FFR": 0.0,
+    "MFR": null,
+    "acc_v1": 1.0,
+    "acc_v2": 1.0
+   },
+   "count": {
+    "n": 8,
+    "obs_flip": 0,
+    "gold_flip": 0,
+    "FR": 0.0,
+    "FFR": 0.0,
+    "MFR": null,
+    "acc_v1": 0.0,
+    "acc_v2": 0.0
+   },
+   "universal": {
+    "n": 8,
+    "obs_flip": 0,
+    "gold_flip": 0,
+    "FR": 0.0,
+    "FFR": 0.0,
+    "MFR": null,
+    "acc_v1": 0.375,
+    "acc_v2": 0.375
+   },
+   "overall": {
+    "n": 24,
+    "FR": 0.0,
+    "FFR": 0.0,
+    "MFR": null,
+    "acc_v1": 0.458,
+    "acc_v2": 0.458
+   }
+  },
+  "restrict_rel": {
+   "referral": {
+    "n": 8,
+    "obs_flip": 4,
+    "gold_flip": 4,
+    "FR": 0.5,
+    "FFR": 0.0,
+    "MFR": 0.0,
+    "acc_v1": 1.0,
+    "acc_v2": 1.0
+   },
+   "count": {
+    "n": 8,
+    "obs_flip": 2,
+    "gold_flip": 4,
+    "FR": 0.25,
+    "FFR": 0.0,
+    "MFR": 0.5,
+    "acc_v1": 0.0,
+    "acc_v2": 0.0
+   },
+   "universal": {
+    "n": 8,
+    "obs_flip": 0,
+    "gold_flip": 3,
+    "FR": 0.0,
+    "FFR": 0.0,
+    "MFR": 1.0,
+    "acc_v1": 0.25,
+    "acc_v2": 0.625
+   },
+   "overall": {
+    "n": 24,
+    "FR": 0.25,
+    "FFR": 0.0,
+    "MFR": 0.455,
+    "acc_v1": 0.417,
+    "acc_v2": 0.542
+   }
+  },
+  "merge_entity": {
+   "referral": {
+    "n": 8,
+    "obs_flip": 1,
+    "gold_flip": 0,
+    "FR": 0.125,
+    "FFR": 0.125,
+    "MFR": null,
+    "acc_v1": 1.0,
+    "acc_v2": 0.875
+   },
+   "count": {
+    "n": 8,
+    "obs_flip": 0,
+    "gold_flip": 8,
+    "FR": 0.0,
+    "FFR": null,
+    "MFR": 1.0,
+    "acc_v1": 0.0,
+    "acc_v2": 0.0
+   },
+   "universal": {
+    "n": 8,
+    "obs_flip": 0,
+    "gold_flip": 2,
+    "FR": 0.0,
+    "FFR": 0.0,
+    "MFR": 1.0,
+    "acc_v1": 0.5,
+    "acc_v2": 0.25
+   },
+   "overall": {
+    "n": 24,
+    "FR": 0.042,
+    "FFR": 0.071,
+    "MFR": 1.0,
+    "acc_v1": 0.5,
+    "acc_v2": 0.375
+   }
+  },
+  "split_concept": {
+   "referral": {
+    "n": 8,
+    "obs_flip": 0,
+    "gold_flip": 0,
+    "FR": 0.0,
+    "FFR": 0.0,
+    "MFR": null,
+    "acc_v1": 1.0,
+    "acc_v2": 1.0
+   },
+   "count": {
+    "n": 8,
+    "obs_flip": 0,
+    "gold_flip": 4,
+    "FR": 0.0,
+    "FFR": 0.0,
+    "MFR": 1.0,
+    "acc_v1": 0.0,
+    "acc_v2": 0.375
+   },
+   "universal": {
+    "n": 8,
+    "obs_flip": 0,
+    "gold_flip": 8,
+    "FR": 0.0,
+    "FFR": null,
+    "MFR": 1.0,
+    "acc_v1": 0.0,
+    "acc_v2": 1.0
+   },
+   "overall": {
+    "n": 24,
+    "FR": 0.0,
+    "FFR": 0.0,
+    "MFR": 1.0,
+    "acc_v1": 0.333,
+    "acc_v2": 0.792
+   }
+  }
+ }
+}

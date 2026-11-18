@@ -1,0 +1,15 @@
+{
+ "system": "B3_LightRAG",
+ "available": false,
+ "package_found": false,
+ "package_origin": null,
+ "llm_keys_present": [],
+ "python": "3.14.6",
+ "executable": "C:\\ProgramData\\Lenovo\\AIAgent\\MCPEnv\\python-3.14.6-embed-amd64\\python.exe",
+ "blocking_reasons": [
+  "python package 'lightrag' is not installed",
+  "no LLM API key in environment (OPENAI_API_KEY, DASHSCOPE_API_KEY, QWEN_API_KEY, LLM_API_KEY)"
+ ],
+ "checked_at": "2026-11-18 20:31:05",
+ "consequence": "No real LightRAG answer is produced in this run. Run `python baselines/b3_lightrag.py --proxy` for the clearly-labelled local stand-in, or install lightrag and export an API key, then rerun without --proxy."
+}

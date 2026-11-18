@@ -1,0 +1,19 @@
+Q add_inst-referral-01 「香港航空」的枢纽机场是哪个（些）？
+  gold=香港国际机场
+  b2='香港国际机场'
+  b3='香港国际机场'
+
+Q restrict_rel-referral-01 「西藏航空」的枢纽机场是哪个（些）？
+  gold=拉萨贡嘎国际机场
+  b2='拉萨贡嘎国际机场'
+  b3='拉萨贡嘎国际机场'
+
+Q merge_entity-referral-01 「中华航空」的枢纽机场是哪个（些）？
+  gold=台湾桃园国际机场
+  b2='台湾桃园国际机场'
+  b3='台湾桃园国际机场'
+
+Q split_concept-referral-01 「Air Japan」的枢纽机场是哪个（些）？
+  gold=成田国际机场
+  b2='成田国际机场'
+  b3='成田国际机场'

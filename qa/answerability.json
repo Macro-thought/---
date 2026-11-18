@@ -1,0 +1,610 @@
+{
+ "stats": {
+  "n": 120,
+  "answerable": 120,
+  "rate": 1.0,
+  "duplicate_questions": {}
+ },
+ "rows": [
+  {
+   "qid": "add_inst-referral-01",
+   "answerable": true,
+   "issues": []
+  },
+  {
+   "qid": "add_inst-referral-02",
+   "answerable": true,
+   "issues": []
+  },
+  {
+   "qid": "add_inst-referral-03",
+   "answerable": true,
+   "issues": []
+  },
+  {
+   "qid": "add_inst-referral-04",
+   "answerable": true,
+   "issues": []
+  },
+  {
+   "qid": "add_inst-referral-05",
+   "answerable": true,
+   "issues": []
+  },
+  {
+   "qid": "add_inst-referral-06",
+   "answerable": true,
+   "issues": []
+  },
+  {
+   "qid": "add_inst-referral-07",
+   "answerable": true,
+   "issues": []
+  },
+  {
+   "qid": "add_inst-referral-08",
+   "answerable": true,
+   "issues": []
+  },
+  {
+   "qid": "add_inst-count-01",
+   "answerable": true,
+   "issues": []
+  },
+  {
+   "qid": "add_inst-count-02",
+   "answerable": true,
+   "issues": []
+  },
+  {
+   "qid": "add_inst-count-03",
+   "answerable": true,
+   "issues": []
+  },
+  {
+   "qid": "add_inst-count-04",
+   "answerable": true,
+   "issues": []
+  },
+  {
+   "qid": "add_inst-count-05",
+   "answerable": true,
+   "issues": []
+  },
+  {
+   "qid": "add_inst-count-06",
+   "answerable": true,
+   "issues": []
+  },
+  {
+   "qid": "add_inst-count-07",
+   "answerable": true,
+   "issues": []
+  },
+  {
+   "qid": "add_inst-count-08",
+   "answerable": true,
+   "issues": []
+  },
+  {
+   "qid": "add_inst-universal-01",
+   "answerable": true,
+   "issues": []
+  },
+  {
+   "qid": "add_inst-universal-02",
+   "answerable": true,
+   "issues": []
+  },
+  {
+   "qid": "add_inst-universal-03",
+   "answerable": true,
+   "issues": []
+  },
+  {
+   "qid": "add_inst-universal-04",
+   "answerable": true,
+   "issues": []
+  },
+  {
+   "qid": "add_inst-universal-05",
+   "answerable": true,
+   "issues": []
+  },
+  {
+   "qid": "add_inst-universal-06",
+   "answerable": true,
+   "issues": []
+  },
+  {
+   "qid": "add_inst-universal-07",
+   "answerable": true,
+   "issues": []
+  },
+  {
+   "qid": "add_inst-universal-08",
+   "answerable": true,
+   "issues": []
+  },
+  {
+   "qid": "refine_type-referral-01",
+   "answerable": true,
+   "issues": []
+  },
+  {
+   "qid": "refine_type-referral-02",
+   "answerable": true,
+   "issues": []
+  },
+  {
+   "qid": "refine_type-referral-03",
+   "answerable": true,
+   "issues": []
+  },
+  {
+   "qid": "refine_type-referral-04",
+   "answerable": true,
+   "issues": []
+  },
+  {
+   "qid": "refine_type-referral-05",
+   "answerable": true,
+   "issues": []
+  },
+  {
+   "qid": "refine_type-referral-06",
+   "answerable": true,
+   "issues": []
+  },
+  {
+   "qid": "refine_type-referral-07",
+   "answerable": true,
+   "issues": []
+  },
+  {
+   "qid": "refine_type-referral-08",
+   "answerable": true,
+   "issues": []
+  },
+  {
+   "qid": "refine_type-count-01",
+   "answerable": true,
+   "issues": []
+  },
+  {
+   "qid": "refine_type-count-02",
+   "answerable": true,
+   "issues": []
+  },
+  {
+   "qid": "refine_type-count-03",
+   "answerable": true,
+   "issues": []
+  },
+  {
+   "qid": "refine_type-count-04",
+   "answerable": true,
+   "issues": []
+  },
+  {
+   "qid": "refine_type-count-05",
+   "answerable": true,
+   "issues": []
+  },
+  {
+   "qid": "refine_type-count-06",
+   "answerable": true,
+   "issues": []
+  },
+  {
+   "qid": "refine_type-count-07",
+   "answerable": true,
+   "issues": []
+  },
+  {
+   "qid": "refine_type-count-08",
+   "answerable": true,
+   "issues": []
+  },
+  {
+   "qid": "refine_type-universal-01",
+   "answerable": true,
+   "issues": []
+  },
+  {
+   "qid": "refine_type-universal-02",
+   "answerable": true,
+   "issues": []
+  },
+  {
+   "qid": "refine_type-universal-03",
+   "answerable": true,
+   "issues": []
+  },
+  {
+   "qid": "refine_type-universal-04",
+   "answerable": true,
+   "issues": []
+  },
+  {
+   "qid": "refine_type-universal-05",
+   "answerable": true,
+   "issues": []
+  },
+  {
+   "qid": "refine_type-universal-06",
+   "answerable": true,
+   "issues": []
+  },
+  {
+   "qid": "refine_type-universal-07",
+   "answerable": true,
+   "issues": []
+  },
+  {
+   "qid": "refine_type-universal-08",
+   "answerable": true,
+   "issues": []
+  },
+  {
+   "qid": "restrict_rel-referral-01",
+   "answerable": true,
+   "issues": []
+  },
+  {
+   "qid": "restrict_rel-referral-02",
+   "answerable": true,
+   "issues": []
+  },
+  {
+   "qid": "restrict_rel-referral-03",
+   "answerable": true,
+   "issues": []
+  },
+  {
+   "qid": "restrict_rel-referral-04",
+   "answerable": true,
+   "issues": []
+  },
+  {
+   "qid": "restrict_rel-referral-05",
+   "answerable": true,
+   "issues": []
+  },
+  {
+   "qid": "restrict_rel-referral-06",
+   "answerable": true,
+   "issues": []
+  },
+  {
+   "qid": "restrict_rel-referral-07",
+   "answerable": true,
+   "issues": []
+  },
+  {
+   "qid": "restrict_rel-referral-08",
+   "answerable": true,
+   "issues": []
+  },
+  {
+   "qid": "restrict_rel-count-01",
+   "answerable": true,
+   "issues": []
+  },
+  {
+   "qid": "restrict_rel-count-02",
+   "answerable": true,
+   "issues": []
+  },
+  {
+   "qid": "restrict_rel-count-03",
+   "answerable": true,
+   "issues": []
+  },
+  {
+   "qid": "restrict_rel-count-04",
+   "answerable": true,
+   "issues": []
+  },
+  {
+   "qid": "restrict_rel-count-05",
+   "answerable": true,
+   "issues": []
+  },
+  {
+   "qid": "restrict_rel-count-06",
+   "answerable": true,
+   "issues": []
+  },
+  {
+   "qid": "restrict_rel-count-07",
+   "answerable": true,
+   "issues": []
+  },
+  {
+   "qid": "restrict_rel-count-08",
+   "answerable": true,
+   "issues": []
+  },
+  {
+   "qid": "restrict_rel-universal-01",
+   "answerable": true,
+   "issues": []
+  },
+  {
+   "qid": "restrict_rel-universal-02",
+   "answerable": true,
+   "issues": []
+  },
+  {
+   "qid": "restrict_rel-universal-03",
+   "answerable": true,
+   "issues": []
+  },
+  {
+   "qid": "restrict_rel-universal-04",
+   "answerable": true,
+   "issues": []
+  },
+  {
+   "qid": "restrict_rel-universal-05",
+   "answerable": true,
+   "issues": []
+  },
+  {
+   "qid": "restrict_rel-universal-06",
+   "answerable": true,
+   "issues": []
+  },
+  {
+   "qid": "restrict_rel-universal-07",
+   "answerable": true,
+   "issues": []
+  },
+  {
+   "qid": "restrict_rel-universal-08",
+   "answerable": true,
+   "issues": []
+  },
+  {
+   "qid": "merge_entity-referral-01",
+   "answerable": true,
+   "issues": []
+  },
+  {
+   "qid": "merge_entity-referral-02",
+   "answerable": true,
+   "issues": []
+  },
+  {
+   "qid": "merge_entity-referral-03",
+   "answerable": true,
+   "issues": []
+  },
+  {
+   "qid": "merge_entity-referral-04",
+   "answerable": true,
+   "issues": []
+  },
+  {
+   "qid": "merge_entity-referral-05",
+   "answerable": true,
+   "issues": []
+  },
+  {
+   "qid": "merge_entity-referral-06",
+   "answerable": true,
+   "issues": []
+  },
+  {
+   "qid": "merge_entity-referral-07",
+   "answerable": true,
+   "issues": []
+  },
+  {
+   "qid": "merge_entity-referral-08",
+   "answerable": true,
+   "issues": []
+  },
+  {
+   "qid": "merge_entity-count-01",
+   "answerable": true,
+   "issues": []
+  },
+  {
+   "qid": "merge_entity-count-02",
+   "answerable": true,
+   "issues": []
+  },
+  {
+   "qid": "merge_entity-count-03",
+   "answerable": true,
+   "issues": []
+  },
+  {
+   "qid": "merge_entity-count-04",
+   "answerable": true,
+   "issues": []
+  },
+  {
+   "qid": "merge_entity-count-05",
+   "answerable": true,
+   "issues": []
+  },
+  {
+   "qid": "merge_entity-count-06",
+   "answerable": true,
+   "issues": []
+  },
+  {
+   "qid": "merge_entity-count-07",
+   "answerable": true,
+   "issues": []
+  },
+  {
+   "qid": "merge_entity-count-08",
+   "answerable": true,
+   "issues": []
+  },
+  {
+   "qid": "merge_entity-universal-01",
+   "answerable": true,
+   "issues": []
+  },
+  {
+   "qid": "merge_entity-universal-02",
+   "answerable": true,
+   "issues": []
+  },
+  {
+   "qid": "merge_entity-universal-03",
+   "answerable": true,
+   "issues": []
+  },
+  {
+   "qid": "merge_entity-universal-04",
+   "answerable": true,
+   "issues": []
+  },
+  {
+   "qid": "merge_entity-universal-05",
+   "answerable": true,
+   "issues": []
+  },
+  {
+   "qid": "merge_entity-universal-06",
+   "answerable": true,
+   "issues": []
+  },
+  {
+   "qid": "merge_entity-universal-07",
+   "answerable": true,
+   "issues": []
+  },
+  {
+   "qid": "merge_entity-universal-08",
+   "answerable": true,
+   "issues": []
+  },
+  {
+   "qid": "split_concept-referral-01",
+   "answerable": true,
+   "issues": []
+  },
+  {
+   "qid": "split_concept-referral-02",
+   "answerable": true,
+   "issues": []
+  },
+  {
+   "qid": "split_concept-referral-03",
+   "answerable": true,
+   "issues": []
+  },
+  {
+   "qid": "split_concept-referral-04",
+   "answerable": true,
+   "issues": []
+  },
+  {
+   "qid": "split_concept-referral-05",
+   "answerable": true,
+   "issues": []
+  },
+  {
+   "qid": "split_concept-referral-06",
+   "answerable": true,
+   "issues": []
+  },
+  {
+   "qid": "split_concept-referral-07",
+   "answerable": true,
+   "issues": []
+  },
+  {
+   "qid": "split_concept-referral-08",
+   "answerable": true,
+   "issues": []
+  },
+  {
+   "qid": "split_concept-count-01",
+   "answerable": true,
+   "issues": []
+  },
+  {
+   "qid": "split_concept-count-02",
+   "answerable": true,
+   "issues": []
+  },
+  {
+   "qid": "split_concept-count-03",
+   "answerable": true,
+   "issues": []
+  },
+  {
+   "qid": "split_concept-count-04",
+   "answerable": true,
+   "issues": []
+  },
+  {
+   "qid": "split_concept-count-05",
+   "answerable": true,
+   "issues": []
+  },
+  {
+   "qid": "split_concept-count-06",
+   "answerable": true,
+   "issues": []
+  },
+  {
+   "qid": "split_concept-count-07",
+   "answerable": true,
+   "issues": []
+  },
+  {
+   "qid": "split_concept-count-08",
+   "answerable": true,
+   "issues": []
+  },
+  {
+   "qid": "split_concept-universal-01",
+   "answerable": true,
+   "issues": []
+  },
+  {
+   "qid": "split_concept-universal-02",
+   "answerable": true,
+   "issues": []
+  },
+  {
+   "qid": "split_concept-universal-03",
+   "answerable": true,
+   "issues": []
+  },
+  {
+   "qid": "split_concept-universal-04",
+   "answerable": true,
+   "issues": []
+  },
+  {
+   "qid": "split_concept-universal-05",
+   "answerable": true,
+   "issues": []
+  },
+  {
+   "qid": "split_concept-universal-06",
+   "answerable": true,
+   "issues": []
+  },
+  {
+   "qid": "split_concept-universal-07",
+   "answerable": true,
+   "issues": []
+  },
+  {
+   "qid": "split_concept-universal-08",
+   "answerable": true,
+   "issues": []
+  }
+ ]
+}

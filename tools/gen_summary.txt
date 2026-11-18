@@ -1,0 +1,139 @@
+n_questions=120
+broken_cells=[]
+
+ADD_INST      referral  n=8 stable=8 flip=0 rate=0.000 prior=稳定
+ADD_INST      count     n=8 stable=8 flip=0 rate=0.000 prior=稳定
+ADD_INST      universal n=8 stable=8 flip=0 rate=0.000 prior=稳定
+REFINE_TYPE   referral  n=8 stable=8 flip=0 rate=0.000 prior=稳定
+REFINE_TYPE   count     n=8 stable=8 flip=0 rate=0.000 prior=稳定
+REFINE_TYPE   universal n=8 stable=8 flip=0 rate=0.000 prior=稳定
+RESTRICT_REL  referral  n=8 stable=4 flip=4 rate=0.500 prior=可能翻
+RESTRICT_REL  count     n=8 stable=4 flip=4 rate=0.500 prior=可能翻
+RESTRICT_REL  universal n=8 stable=5 flip=3 rate=0.375 prior=可能翻
+MERGE_ENTITY  referral  n=8 stable=8 flip=0 rate=0.000 prior=稳定
+MERGE_ENTITY  count     n=8 stable=0 flip=8 rate=1.000 prior=必翻
+MERGE_ENTITY  universal n=8 stable=6 flip=2 rate=0.250 prior=可能翻
+SPLIT_CONCEPT referral  n=8 stable=8 flip=0 rate=0.000 prior=稳定
+SPLIT_CONCEPT count     n=8 stable=4 flip=4 rate=0.500 prior=可能翻
+SPLIT_CONCEPT universal n=8 stable=0 flip=8 rate=1.000 prior=必翻
+
+add_inst-referral-01 | 「香港航空」的枢纽机场是哪个（些）？ | entity_set | v1=香港国际机场 | v2=香港国际机场 | stable
+add_inst-referral-02 | 「朱鹭航空」的枢纽机场是哪个（些）？ | entity_set | v1=新潟机场 | v2=新潟机场 | stable
+add_inst-referral-03 | 「长安航空」的枢纽机场是哪个（些）？ | entity_set | v1=西安咸阳国际机场 | v2=西安咸阳国际机场 | stable
+add_inst-referral-04 | 「普莱米娅航空」的枢纽机场是哪个（些）？ | entity_set | v1=仁川国际机场 | v2=仁川国际机场 | stable
+add_inst-referral-05 | 「台湾航空」的枢纽机场是哪个（些）？ | entity_set | v1=高雄国际机场 | v2=高雄国际机场 | stable
+add_inst-referral-06 | 「中国货运航空」的枢纽机场是哪个（些）？ | entity_set | v1=上海虹桥国际机场 | v2=上海虹桥国际机场 | stable
+add_inst-referral-07 | 「华夏航空」的枢纽机场是哪个（些）？ | entity_set | v1=重庆江北国际机场 | v2=重庆江北国际机场 | stable
+add_inst-referral-08 | 「中国西北航空」的枢纽机场是哪个（些）？ | entity_set | v1=西安咸阳国际机场 | v2=西安咸阳国际机场 | stable
+add_inst-count-01 | 中国共有多少个航空公司？ | int | v1=101 | v2=101 | stable
+add_inst-count-02 | 日本共有多少个航空公司？ | int | v1=46 | v2=46 | stable
+add_inst-count-03 | 台湾地区共有多少个航空公司？ | int | v1=20 | v2=20 | stable
+add_inst-count-04 | 韩国共有多少个航空公司？ | int | v1=16 | v2=16 | stable
+add_inst-count-05 | 韩国共有多少个机场？ | int | v1=9 | v2=9 | stable
+add_inst-count-06 | 日本的航空公司中，有运营机型的有多少个？ | int | v1=14 | v2=14 | stable
+add_inst-count-07 | 中国共有多少个货运航空？ | int | v1=8 | v2=8 | stable
+add_inst-count-08 | 日本共有多少个国际机场？ | int | v1=6 | v2=6 | stable
+add_inst-universal-01 | 是否所有中国的航空公司都有国家？ | bool | v1=是 | v2=是 | stable
+add_inst-universal-02 | 是否所有日本的航空公司都有枢纽机场？ | bool | v1=否 | v2=否 | stable
+add_inst-universal-03 | 是否所有台湾地区的航空公司都有枢纽机场？ | bool | v1=否 | v2=否 | stable
+add_inst-universal-04 | 是否所有韩国的航空公司都有运营机型？ | bool | v1=否 | v2=否 | stable
+add_inst-universal-05 | 是否所有中国的航空公司都有总部？ | bool | v1=否 | v2=否 | stable
+add_inst-universal-06 | 是否所有中国的机场都有所在行政区？ | bool | v1=否 | v2=否 | stable
+add_inst-universal-07 | 是否所有日本的货运航空都有枢纽机场？ | bool | v1=否 | v2=否 | stable
+add_inst-universal-08 | 是否所有中国的机场都有服务城市？ | bool | v1=是 | v2=是 | stable
+refine_type-referral-01 | 「仁川航空」的枢纽机场是哪个（些）？ | entity_set | v1=仁川国际机场 | v2=仁川国际机场 | stable
+refine_type-referral-02 | 「东方空桥」的枢纽机场是哪个（些）？ | entity_set | v1=长崎机场 | v2=长崎机场 | stable
+refine_type-referral-03 | 「北海道空中系统」的枢纽机场是哪个（些）？ | entity_set | v1=札幌飞行场 | v2=札幌飞行场 | stable
+refine_type-referral-04 | 「商舟航空物流」的枢纽机场是哪个（些）？ | entity_set | v1=厦门高崎国际机场、杭州萧山国际机场、福州长乐国际机场 | v2=厦门高崎国际机场、杭州萧山国际机场、福州长乐国际机场 | stable
+refine_type-referral-05 | 「中国邮政航空」的枢纽机场是哪个（些）？ | entity_set | v1=南京禄口国际机场 | v2=南京禄口国际机场 | stable
+refine_type-referral-06 | 「中国西部航空」的枢纽机场是哪个（些）？ | entity_set | v1=重庆江北国际机场 | v2=重庆江北国际机场 | stable
+refine_type-referral-07 | 「中国联合航空」的枢纽机场是哪个（些）？ | entity_set | v1=北京大兴国际机场 | v2=北京大兴国际机场 | stable
+refine_type-referral-08 | 「河北航空」的枢纽机场是哪个（些）？ | entity_set | v1=石家庄正定国际机场 | v2=石家庄正定国际机场 | stable
+refine_type-count-01 | 机场中，有所在行政区的有多少个？ | int | v1=51 | v2=51 | stable
+refine_type-count-02 | 全图共有多少个货运航空？ | int | v1=11 | v2=11 | stable
+refine_type-count-03 | 全图共有多少个支线航空？ | int | v1=3 | v2=3 | stable
+refine_type-count-04 | 全图共有多少个低成本航空？ | int | v1=1 | v2=1 | stable
+refine_type-count-05 | 全图共有多少个直升机航空？ | int | v1=1 | v2=1 | stable
+refine_type-count-06 | 航空公司中，有枢纽机场的有多少个？ | int | v1=128 | v2=128 | stable
+refine_type-count-07 | 全图共有多少个固定翼机型？ | int | v1=81 | v2=81 | stable
+refine_type-count-08 | 全图共有多少个直升机？ | int | v1=1 | v2=1 | stable
+refine_type-universal-01 | 是否所有航空公司都是企业？ | bool | v1=是 | v2=是 | stable
+refine_type-universal-02 | 是否所有航空公司都有国家？ | bool | v1=是 | v2=是 | stable
+refine_type-universal-03 | 是否所有航空公司都有枢纽机场？ | bool | v1=否 | v2=否 | stable
+refine_type-universal-04 | 是否所有货运航空都有枢纽机场？ | bool | v1=否 | v2=否 | stable
+refine_type-universal-05 | 是否所有航空公司都有运营机型？ | bool | v1=否 | v2=否 | stable
+refine_type-universal-06 | 是否所有货运航空都是航空公司？ | bool | v1=是 | v2=是 | stable
+refine_type-universal-07 | 是否所有支线航空的枢纽机场都是国际机场？ | bool | v1=否 | v2=否 | stable
+refine_type-universal-08 | 是否所有直升机航空都有枢纽机场？ | bool | v1=否 | v2=否 | stable
+restrict_rel-referral-01 | 「西藏航空」的枢纽机场是哪个（些）？ | entity_set | v1=拉萨贡嘎国际机场 | v2=(空集) | flip
+restrict_rel-referral-02 | 「第一航空」的枢纽机场是哪个（些）？ | entity_set | v1=八尾机场、广岛西机场 | v2=(空集) | flip
+restrict_rel-referral-03 | 「琉球空中通勤」的枢纽机场是哪个（些）？ | entity_set | v1=那霸机场 | v2=(空集) | flip
+restrict_rel-referral-04 | 「日本空中通勤」的枢纽机场是哪个（些）？ | entity_set | v1=鹿儿岛机场 | v2=(空集) | flip
+restrict_rel-referral-05 | 「重庆航空」的枢纽机场是哪个（些）？ | entity_set | v1=重庆江北国际机场 | v2=重庆江北国际机场 | stable
+restrict_rel-referral-06 | 「瑞士亚洲航空」的枢纽机场是哪个（些）？ | entity_set | v1=台湾桃园国际机场、苏黎世机场 | v2=台湾桃园国际机场、苏黎世机场 | stable
+restrict_rel-referral-07 | 「深圳东海航空」的枢纽机场是哪个（些）？ | entity_set | v1=深圳宝安国际机场 | v2=深圳宝安国际机场 | stable
+restrict_rel-referral-08 | 「中国北方航空」的枢纽机场是哪个（些）？ | entity_set | v1=沈阳桃仙国际机场 | v2=沈阳桃仙国际机场 | stable
+restrict_rel-count-01 | 日本的航空公司中，有枢纽机场的有多少个？ | int | v1=34 | v2=20 | flip
+restrict_rel-count-02 | 中国的航空公司中，有枢纽机场的有多少个？ | int | v1=63 | v2=61 | flip
+restrict_rel-count-03 | 韩国的航空公司中，有枢纽机场的有多少个？ | int | v1=15 | v2=14 | flip
+restrict_rel-count-04 | 航空公司中，枢纽机场包含「那霸机场」的有多少个？ | int | v1=4 | v2=0 | flip
+restrict_rel-count-05 | 全图共有多少个机型？ | int | v1=81 | v2=81 | stable
+restrict_rel-count-06 | 全图共有多少个组织？ | int | v1=329 | v2=329 | stable
+restrict_rel-count-07 | 全图共有多少个国家？ | int | v1=4 | v2=4 | stable
+restrict_rel-count-08 | 日本共有多少个机场？ | int | v1=20 | v2=20 | stable
+restrict_rel-universal-01 | 是否所有韩国的航空公司都有枢纽机场？ | bool | v1=否 | v2=否 | stable
+restrict_rel-universal-02 | 是否所有航空公司的枢纽机场都是国际机场？ | bool | v1=否 | v2=是 | flip
+restrict_rel-universal-03 | 是否所有日本的航空公司的枢纽机场都是国际机场？ | bool | v1=否 | v2=是 | flip
+restrict_rel-universal-04 | 是否所有中国的航空公司的枢纽机场都是国际机场？ | bool | v1=否 | v2=是 | flip
+restrict_rel-universal-05 | 是否所有韩国的航空公司都有国家？ | bool | v1=是 | v2=是 | stable
+restrict_rel-universal-06 | 是否所有中国的航空公司都有运营机型？ | bool | v1=否 | v2=否 | stable
+restrict_rel-universal-07 | 是否所有中国的货运航空都有枢纽机场？ | bool | v1=否 | v2=否 | stable
+restrict_rel-universal-08 | 是否所有日本的机场都有国家？ | bool | v1=是 | v2=是 | stable
+merge_entity-referral-01 | 「中华航空」的枢纽机场是哪个（些）？ | entity_set | v1=台湾桃园国际机场 | v2=台湾桃园国际机场 | stable
+merge_entity-referral-02 | 「日本佳速航空」的枢纽机场是哪个（些）？ | entity_set | v1=东京国际机场 | v2=东京国际机场 | stable
+merge_entity-referral-03 | 「银河航空」的枢纽机场是哪个（些）？ | entity_set | v1=东京国际机场 | v2=东京国际机场 | stable
+merge_entity-referral-04 | 「华信航空」的枢纽机场是哪个（些）？ | entity_set | v1=台中清泉岗机场 | v2=台中清泉岗机场 | stable
+merge_entity-referral-05 | 「春秋航空日本」的枢纽机场是哪个（些）？ | entity_set | v1=成田国际机场 | v2=成田国际机场 | stable
+merge_entity-referral-06 | 「山东航空」的枢纽机场是哪个（些）？ | entity_set | v1=济南遥墙国际机场 | v2=济南遥墙国际机场 | stable
+merge_entity-referral-07 | 「捷星日本航空」的枢纽机场是哪个（些）？ | entity_set | v1=关西国际机场、成田国际机场 | v2=关西国际机场、成田国际机场 | stable
+merge_entity-referral-08 | 「J-Air」的枢纽机场是哪个（些）？ | entity_set | v1=大阪国际机场 | v2=大阪国际机场 | stable
+merge_entity-count-01 | 全图共有多少个航空公司？ | int | v1=185 | v2=184 | flip
+merge_entity-count-02 | 全图共有多少个企业？ | int | v1=271 | v2=270 | flip
+merge_entity-count-03 | 台湾地区的航空公司中，有枢纽机场的有多少个？ | int | v1=15 | v2=14 | flip
+merge_entity-count-04 | 航空公司中，有运营机型的有多少个？ | int | v1=42 | v2=41 | flip
+merge_entity-count-05 | 航空公司中，有航空联盟的有多少个？ | int | v1=36 | v2=35 | flip
+merge_entity-count-06 | 航空公司中，有子公司的有多少个？ | int | v1=17 | v2=16 | flip
+merge_entity-count-07 | 航空公司中，有所有者的有多少个？ | int | v1=16 | v2=15 | flip
+merge_entity-count-08 | 航空公司中，有国家的有多少个？ | int | v1=185 | v2=184 | flip
+merge_entity-universal-01 | 是否所有台湾地区的航空公司都有国家？ | bool | v1=是 | v2=是 | stable
+merge_entity-universal-02 | 是否所有中国的航空公司都是企业？ | bool | v1=是 | v2=是 | stable
+merge_entity-universal-03 | 是否所有企业都有国家？ | bool | v1=否 | v2=否 | stable
+merge_entity-universal-04 | 是否「华航集团」的子公司都是航空公司？ | bool | v1=是 | v2=否 | flip
+merge_entity-universal-05 | 是否「华航集团」的子公司对象都有枢纽机场？ | bool | v1=是 | v2=否 | flip
+merge_entity-universal-06 | 是否所有台湾地区的航空公司都有运营机型？ | bool | v1=否 | v2=否 | stable
+merge_entity-universal-07 | 是否所有航空公司都有母组织？ | bool | v1=否 | v2=否 | stable
+merge_entity-universal-08 | 是否所有组织的子公司对象都有国家？ | bool | v1=否 | v2=否 | stable
+split_concept-referral-01 | 「Air Japan」的枢纽机场是哪个（些）？ | entity_set | v1=成田国际机场 | v2=成田国际机场 | stable
+split_concept-referral-02 | 「非凡航空」的枢纽机场是哪个（些）？ | entity_set | v1=澳门国际机场 | v2=澳门国际机场 | stable
+split_concept-referral-03 | 「翡翠航空」的枢纽机场是哪个（些）？ | entity_set | v1=深圳宝安国际机场 | v2=深圳宝安国际机场 | stable
+split_concept-referral-04 | 「日本航空快运」的枢纽机场是哪个（些）？ | entity_set | v1=东京国际机场 | v2=东京国际机场 | stable
+split_concept-referral-05 | 「富士梦幻航空」的枢纽机场是哪个（些）？ | entity_set | v1=名古屋飞行场、神户机场、静冈机场 | v2=名古屋飞行场、神户机场、静冈机场 | stable
+split_concept-referral-06 | 「日线航空」的枢纽机场是哪个（些）？ | entity_set | v1=成田国际机场 | v2=成田国际机场 | stable
+split_concept-referral-07 | 「春秋航空」的枢纽机场是哪个（些）？ | entity_set | v1=上海浦东国际机场 | v2=上海浦东国际机场 | stable
+split_concept-referral-08 | 「IBEX航空」的枢纽机场是哪个（些）？ | entity_set | v1=仙台机场 | v2=仙台机场 | stable
+split_concept-count-01 | 全图共有多少个机场？ | int | v1=74 | v2=0 | flip
+split_concept-count-02 | 中国共有多少个机场？ | int | v1=35 | v2=0 | flip
+split_concept-count-03 | 机场中，有服务城市的有多少个？ | int | v1=73 | v2=0 | flip
+split_concept-count-04 | 机场中，有国家的有多少个？ | int | v1=74 | v2=0 | flip
+split_concept-count-05 | 全图共有多少个国际机场？ | int | v1=53 | v2=53 | stable
+split_concept-count-06 | 全图共有多少个普通机场？ | int | v1=21 | v2=21 | stable
+split_concept-count-07 | 全图共有多少个城市？ | int | v1=75 | v2=75 | stable
+split_concept-count-08 | 中国共有多少个国际机场？ | int | v1=31 | v2=31 | stable
+split_concept-universal-01 | 是否所有机场都有服务城市？ | bool | v1=否 | v2=是 | flip
+split_concept-universal-02 | 是否所有机场都有所在行政区？ | bool | v1=否 | v2=是 | flip
+split_concept-universal-03 | 是否所有机场都是某个枢纽机场的目标？ | bool | v1=否 | v2=是 | flip
+split_concept-universal-04 | 是否所有机场都是国际机场？ | bool | v1=否 | v2=是 | flip
+split_concept-universal-05 | 是否所有日本的机场都是国际机场？ | bool | v1=否 | v2=是 | flip
+split_concept-universal-06 | 是否所有中国的机场都是国际机场？ | bool | v1=否 | v2=是 | flip
+split_concept-universal-07 | 是否所有中国的机场都是某个枢纽机场的目标？ | bool | v1=否 | v2=是 | flip
+split_concept-universal-08 | 是否所有日本的机场都有所在行政区？ | bool | v1=否 | v2=是 | flip

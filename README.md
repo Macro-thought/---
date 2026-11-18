@@ -1,64 +1,94 @@
-# 研究数据集存档
+# 受控扰动下的图推理结论翻转诊断
 
-RAG / 知识图谱方向研究用的原始数据，从一个本地工作目录里整理出来，单独存放以免和代码混在一起。
+围绕 Wikidata 航空子图，构造五种模式演化算子（REFINE_TYPE、RESTRICT_REL、MERGE_ENTITY、SPLIT_CONCEPT，以及对照 ADD_INST），用确定性求解器自动生成「应然翻转」标签，诊断图检索 / GraphRAG 系统在知识图谱模式演化下的答案稳定性。
 
-整理日期：2026-11-16。数据来自公开渠道，均为原样存档，未做二次加工（`wiki_zh` 下几个 json 是从分片里抽出来的派生文件）。
+对应任务书：*Does Your Answer Survive the Schema Change? A Controlled Perturbation Study of Graph Reasoning under KG Evolution*（CCKS/CCL 短文方向）。
 
-## 目录
+完整执行报告见 [REPORT.md](REPORT.md)。
 
-| 路径 | 体积 | 内容 |
-|---|---|---|
-| `_datasets/rot_kg.zip` | 34 MB | RotatE 官方仓库 + WN18RR 数据包，TransE / RotatE 复现用 |
-| `_datasets/musique/musique_dev.jsonl` | 29 MB | MuSiQue dev 集，早期 schema 算子原型的输入 |
-| `_datasets/wiki_zh/` | 38 MB（见下） | 中文维基抽出的标题表、正文与匹配结果 |
-| `_datasets/papers/` | 1.4 MB | TransE (2013)、ConvE (2018)、RotatE (2019) 三篇方法/基线原文 |
-| `_datasets/web/` | 592 KB | 网页存档：CCKS 会议页、一个相关页面 |
+## 核心数字
 
-`_datasets/wiki_zh/` 里：
+| 项 | 值 |
+|---|---|
+| 图规模 | 600 实体 / 1506 边（航空公司 185、机场 74、机型 81、城市 75） |
+| 算子 | 4 个主算子 + 1 个对照，5 份变体图全部通过不变量检查 |
+| 题库 | 120 题 = 5 算子 × 3 问句类型 × 8，全局无重复 |
+| 应然矩阵 | 15 格与先验全部吻合（9 格 match、6 格 consistent） |
+| 语料 | 600 篇，每篇 3–5 句，0 标签泄漏 |
+| 可答性 | 120/120 |
+| 基线冒烟 | 13 次运行 / 1560 条问答；一轮全量约 2.31 元（qwen-plus 档位估算） |
 
-- `titles.json` — 1,384,748 条中文维基条目标题
-- `texts.json` — 394 篇正文，键为条目标题
-- `texts_clean.json` — 同上，做过去噪
-- `match.json` / `match2.json` — 标题与正文的匹配结果
+## 目录结构
 
-## 6 个 parquet 分片：走 Releases，不进 git
+```
+data/            图数据（graph_v1.json、raw_graph.json、schema.json、add_instances.json）
+                 data/raw/ 为 QLever 请求缓存，未纳入版本库
+tools/           取数与建图脚本（qlever.py、fetch_raw.py、build_graph.py、dump_shapes.py）
+ops/             算子实现、5 份变体图与 diff、不变量检查
+labels/          确定性求解器、120 条标签、15 格矩阵、独立抽查
+qa/              题库生成、可答性审计、20 题复核样张
+corpus/          语料构建、600 篇文档、模板说明
+baselines/       B1 朴素 RAG / B2 图检索 / B3 LightRAG（探测 + 本地 proxy）
+eval/            答案翻转评分（FR / FFR / MFR）
+logs/            决策日志、冒烟记录、抽查记录
+REPORT.md        一阶段执行报告
+```
 
-`wiki_zh/train-00000-of-00006.parquet` ~ `train-00005`，合计 1.64 GB，单文件 121–560 MB，**超过 GitHub 单文件 100 MB 的硬限制**，普通 git 推不上去（服务端直接拒收，不是配置问题）。
+## 快速开始
 
-这 6 个文件放在本仓的 Release 附件里（附件单文件上限 2 GB，免费，不占 git 历史）：
-
-**下载地址**：https://github.com/Starry985666/---/releases/tag/v1-parquet
-
-| 文件 | 体积 | SHA-256（前 16 位） |
-|---|---|---|
-| `train-00000-of-00006.parquet` | 559 MB | `853ddf4a138c792a` |
-| `train-00001-of-00006.parquet` | 251 MB | `038b08e5aae38b5a` |
-| `train-00002-of-00006.parquet` | 120 MB | `ec8f6c0dd1418b8f` |
-| `train-00003-of-00006.parquet` | 249 MB | `4884e4933fa91f46` |
-| `train-00004-of-00006.parquet` | 244 MB | `415a5cd235a359a0` |
-| `train-00005-of-00006.parquet` | 214 MB | `803ae27118b1daf9` |
-
-下载后放回 `_datasets/wiki_zh/`，与 `titles.json` 同级即可。校验：
+实验部分只依赖 Python 标准库（在 Python 3.14 上验证，3.10+ 应可运行）：
 
 ```bash
-cd _datasets/wiki_zh && sha256sum train-*.parquet   # 对照上表前 16 位
+python ops/operators.py            # 生成 5 份变体图 + diff
+python ops/invariant_check.py      # 不变量检查
+python qa/generate_questions.py    # 120 题 + 标签 + 矩阵
+python labels/spotcheck.py         # 独立抽查 3 条
+python corpus/build_corpus.py      # 600 篇语料
+python qa/answerability.py         # 可答性审计
+python baselines/b1_naive.py
+python baselines/b2_graph.py
+python baselines/b3_lightrag.py            # 探测 LightRAG 可用性
+python baselines/b3_lightrag.py --proxy    # 本地混合检索替身
+python eval/score.py
 ```
 
-**校验口径**：用这批分片重新抽取，标题数应与 `titles.json` 的 1,384,748 条一致；版本不同会有出入，以实际抽出的 `texts.json` 是否覆盖所需条目为准。
+从 Wikidata 重新取图才需要第三方依赖：
 
-## 许可与出处
-
-- `wiki_zh/` — 来自中文维基百科快照，文本按 CC BY-SA 授权，转载需署名并以相同方式共享
-- `musique/` — MuSiQue 数据集，CC BY 4.0
-- `rot_kg.zip` — RotatE 官方代码（MIT）与其附带的 WN18RR 数据包
-- `papers/` — 三篇论文的版权归原作者/出版方，此处仅作个人研究存档，非商业分发
-
-## 用法
-
-数据目录结构即仓库结构，脚本按相对路径读：
-
-```python
-from pathlib import Path
-DATA = Path("_datasets")
-MUSIQUE = DATA / "musique" / "musique_dev.jsonl"
+```bash
+pip install -r requirements.txt
+python tools/fetch_raw.py
+python tools/build_graph.py
+python tools/fetch_add.py
 ```
+
+## 方法口径
+
+**成员语义**：`members(T)` = 节点类型为 T，或 T 在 `type_path` 中，或 T 出现在 facet 属性（`p31_subtype` / `airport_class` / `aircraft_class`）里。祖先包含 + 叶子 facet。
+
+**REFINE 与 SPLIT 的区别**是本研究的核心操纵变量：
+
+- REFINE 保留父概念在 `type_path` 中，父类仍指称原集合 → 全部稳定。
+- SPLIT 从 `type_path` 中移除父概念，父类实例集变空 → 全称题按经典空域语义翻真。
+
+**标签来源**：求解器在 G_v1 与 G_op 上分别求值，答案不同即判 flip，无人工标注、无 κ。
+
+## 应然矩阵
+
+| 算子 | 指称 | 计数 | 全称 |
+|---|---|---|---|
+| ADD_INST | 0/8 | 0/8 | 0/8 |
+| REFINE_TYPE | 0/8 | 0/8 | 0/8 |
+| RESTRICT_REL | 4/8 | 4/8 | 3/8 |
+| MERGE_ENTITY | 0/8 | 8/8 | 2/8 |
+| SPLIT_CONCEPT | 0/8 | 4/8 | 8/8 |
+
+## 已知限制
+
+- 本机无 LLM API key，B1/B2/B3 使用**抽取式占位阅读器**，真实 FR/FFR/MFR 待 key 到位后运行；替换点为 `baselines/common.py:read_answer`。
+- `lightrag` 未安装，B3 只有可用性探测 + 明确标注的本地 proxy，`baselines/out/b3_status.json` 记录原因。
+- 无 PyTorch 环境，任务书可选的 KGE 漂移对照未执行。
+- token 成本按字符数 / 1.5 估算，误差约 ±20%。
+
+## 数据来源
+
+图数据来自 Wikidata，经 `https://qlever.dev/api/wikidata` 抽取，种子为 P31/P279* Q46970 且 P17 属于中国、香港、澳门、台湾地区、日本、韩国。Wikidata 数据以 CC0 发布；本仓库中的节点 ID、标签与关系为派生数据。抽取时间与查询语句见 `tools/` 与 `data/graph_stats.json`。

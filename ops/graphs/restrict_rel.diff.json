@@ -1,0 +1,267 @@
+{
+ "op": "RESTRICT_REL",
+ "params": {
+  "op": "RESTRICT_REL",
+  "rel": "枢纽机场",
+  "attribute": "airport_class",
+  "value": "国际机场"
+ },
+ "removed_edges": [
+  {
+   "edge": {
+    "h": "Q105481325",
+    "rel": "枢纽机场",
+    "rel_code": "hub",
+    "t": "Q1197536",
+    "props": {},
+    "source": "P113"
+   },
+   "reason": "target Q1197536 does not satisfy airport_class=国际机场"
+  },
+  {
+   "edge": {
+    "h": "Q1090978",
+    "rel": "枢纽机场",
+    "rel_code": "hub",
+    "t": "Q786209",
+    "props": {},
+    "source": "P113"
+   },
+   "reason": "target Q786209 does not satisfy airport_class=国际机场"
+  },
+  {
+   "edge": {
+    "h": "Q11280963",
+    "rel": "枢纽机场",
+    "rel_code": "hub",
+    "t": "Q1366065",
+    "props": {},
+    "source": "P113"
+   },
+   "reason": "target Q1366065 does not satisfy airport_class=国际机场"
+  },
+  {
+   "edge": {
+    "h": "Q11280963",
+    "rel": "枢纽机场",
+    "rel_code": "hub",
+    "t": "Q3273382",
+    "props": {},
+    "source": "P113"
+   },
+   "reason": "target Q3273382 does not satisfy airport_class=国际机场"
+  },
+  {
+   "edge": {
+    "h": "Q1151882",
+    "rel": "枢纽机场",
+    "rel_code": "hub",
+    "t": "Q133796",
+    "props": {},
+    "source": "P113"
+   },
+   "reason": "target Q133796 does not satisfy airport_class=国际机场"
+  },
+  {
+   "edge": {
+    "h": "Q1154361",
+    "rel": "枢纽机场",
+    "rel_code": "hub",
+    "t": "Q1197455",
+    "props": {},
+    "source": "P113"
+   },
+   "reason": "target Q1197455 does not satisfy airport_class=国际机场"
+  },
+  {
+   "edge": {
+    "h": "Q1188206",
+    "rel": "枢纽机场",
+    "rel_code": "hub",
+    "t": "Q2902013",
+    "props": {},
+    "source": "P113"
+   },
+   "reason": "target Q2902013 does not satisfy airport_class=国际机场"
+  },
+  {
+   "edge": {
+    "h": "Q1191485",
+    "rel": "枢纽机场",
+    "rel_code": "hub",
+    "t": "Q1156310",
+    "props": {},
+    "source": "P113"
+   },
+   "reason": "target Q1156310 does not satisfy airport_class=国际机场"
+  },
+  {
+   "edge": {
+    "h": "Q1318207",
+    "rel": "枢纽机场",
+    "rel_code": "hub",
+    "t": "Q1209993",
+    "props": {},
+    "source": "P113"
+   },
+   "reason": "target Q1209993 does not satisfy airport_class=国际机场"
+  },
+  {
+   "edge": {
+    "h": "Q1318207",
+    "rel": "枢纽机场",
+    "rel_code": "hub",
+    "t": "Q1322497",
+    "props": {},
+    "source": "P113"
+   },
+   "reason": "target Q1322497 does not satisfy airport_class=国际机场"
+  },
+  {
+   "edge": {
+    "h": "Q1318207",
+    "rel": "枢纽机场",
+    "rel_code": "hub",
+    "t": "Q741372",
+    "props": {},
+    "source": "P113"
+   },
+   "reason": "target Q741372 does not satisfy airport_class=国际机场"
+  },
+  {
+   "edge": {
+    "h": "Q1340730",
+    "rel": "枢纽机场",
+    "rel_code": "hub",
+    "t": "Q1054857",
+    "props": {},
+    "source": "P113"
+   },
+   "reason": "target Q1054857 does not satisfy airport_class=国际机场"
+  },
+  {
+   "edge": {
+    "h": "Q1344355",
+    "rel": "枢纽机场",
+    "rel_code": "hub",
+    "t": "Q594223",
+    "props": {},
+    "source": "P113"
+   },
+   "reason": "target Q594223 does not satisfy airport_class=国际机场"
+  },
+  {
+   "edge": {
+    "h": "Q134881248",
+    "rel": "枢纽机场",
+    "rel_code": "hub",
+    "t": "Q1197455",
+    "props": {},
+    "source": "P113"
+   },
+   "reason": "target Q1197455 does not satisfy airport_class=国际机场"
+  },
+  {
+   "edge": {
+    "h": "Q1364998",
+    "rel": "枢纽机场",
+    "rel_code": "hub",
+    "t": "Q1197455",
+    "props": {},
+    "source": "P113"
+   },
+   "reason": "target Q1197455 does not satisfy airport_class=国际机场"
+  },
+  {
+   "edge": {
+    "h": "Q137217028",
+    "rel": "枢纽机场",
+    "rel_code": "hub",
+    "t": "Q860300",
+    "props": {},
+    "source": "P113"
+   },
+   "reason": "target Q860300 does not satisfy airport_class=国际机场"
+  },
+  {
+   "edge": {
+    "h": "Q39060596",
+    "rel": "枢纽机场",
+    "rel_code": "hub",
+    "t": "Q5968461",
+    "props": {},
+    "source": "P113"
+   },
+   "reason": "target Q5968461 does not satisfy airport_class=国际机场"
+  },
+  {
+   "edge": {
+    "h": "Q507508",
+    "rel": "枢纽机场",
+    "rel_code": "hub",
+    "t": "Q970339",
+    "props": {},
+    "source": "P113"
+   },
+   "reason": "target Q970339 does not satisfy airport_class=国际机场"
+  },
+  {
+   "edge": {
+    "h": "Q574659",
+    "rel": "枢纽机场",
+    "rel_code": "hub",
+    "t": "Q1197455",
+    "props": {},
+    "source": "P113"
+   },
+   "reason": "target Q1197455 does not satisfy airport_class=国际机场"
+  },
+  {
+   "edge": {
+    "h": "Q65310789",
+    "rel": "枢纽机场",
+    "rel_code": "hub",
+    "t": "Q484730",
+    "props": {},
+    "source": "P113"
+   },
+   "reason": "target Q484730 does not satisfy airport_class=国际机场"
+  },
+  {
+   "edge": {
+    "h": "Q6960266",
+    "rel": "枢纽机场",
+    "rel_code": "hub",
+    "t": "Q1322497",
+    "props": {},
+    "source": "P113"
+   },
+   "reason": "target Q1322497 does not satisfy airport_class=国际机场"
+  },
+  {
+   "edge": {
+    "h": "Q710605",
+    "rel": "枢纽机场",
+    "rel_code": "hub",
+    "t": "Q708576",
+    "props": {},
+    "source": "P113"
+   },
+   "reason": "target Q708576 does not satisfy airport_class=国际机场"
+  },
+  {
+   "edge": {
+    "h": "Q851473",
+    "rel": "枢纽机场",
+    "rel_code": "hub",
+    "t": "Q1155685",
+    "props": {},
+    "source": "P113"
+   },
+   "reason": "target Q1155685 does not satisfy airport_class=国际机场"
+  }
+ ],
+ "n_removed": 23,
+ "n_edges_before": 1506,
+ "n_edges_after": 1483
+}

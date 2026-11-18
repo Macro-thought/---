@@ -1,0 +1,4 @@
+# Only needed to rebuild the graph from Wikidata (tools/fetch_raw.py,
+# tools/build_graph.py, tools/fetch_add.py). All experiments run on the
+# committed JSON/JSONL artifacts with the Python standard library alone.
+opencc-python-reimplemented==0.1.7
